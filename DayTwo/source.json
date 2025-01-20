@@ -1,0 +1,27 @@
+[
+    {
+        "sno": 1,
+        "name": "John Doe",
+        "city": "New York"
+    },
+    {
+        "sno": 2,
+        "name": "Jane Smith",
+        "city": "Los Angeles"
+    },
+    {
+        "sno": 3,
+        "name": "Alice Johnson",
+        "city": "Chicago"
+    },
+    {
+        "sno": 4,
+        "name": "Bob Brown",
+        "city": "Houston"
+    },
+    {
+        "sno": 5,
+        "name": "Charlie Davis",
+        "city": "Phoenix"
+    }
+]

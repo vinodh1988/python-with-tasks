@@ -1,0 +1,7 @@
+Name: Joseph, Age: 23, City: Sydney
+Name: Naresh, Age: 34, City: Mumbai
+Name: Kiran, Age: 34, City: Chennai
+Name: Kevin, Age: 74, City: Mumbai
+Name: Jay, Age: 34, City: Mumbai
+Name: Peterson, Age: 35, City: London
+Name: Lara, Age: 34, City: Mumbai

@@ -1,0 +1,19 @@
+# Define a function to filter even numbers
+def is_even(num):
+    return num % 2 == 0
+
+def isTwodigit(x):
+    return x>=10 and x<=99
+# List of numbers
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10,34,35,325,243,23]
+names=["sai","ram","lakshmi","siva","sri","Krishna","Harsha","Ravi","Rajesh"]
+# Use filter to get even numbers
+even_numbers = list(filter(is_even, numbers))
+isTwodigits = list(filter(isTwodigit, numbers))
+is3digits = list(filter(lambda x: x>=100 and x<=999, numbers))
+bigones=list(filter(lambda x: len(x)>3, names))
+# Print the result
+print("Even numbers:", even_numbers)
+print("Two Digits:", isTwodigits)
+print("Three Digits:", is3digits)	
+print("Big Names:", bigones)	
