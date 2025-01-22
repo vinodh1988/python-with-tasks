@@ -1,106 +1,81 @@
-### User and Permissions
 
-- Create a new user `db_user`.
-- Grant `CONNECT` permission to `db_user`.
-- Grant `CREATE TABLE`, `ALTER TABLE`, `DROP TABLE`, and `SELECT` permissions to `db_user` on all objects in the `books` database.
+Before performing the queries update the hiredate to +20 years
 
-in the books database create the following things 
-## Database Schema and Operations
+ie., add 20 years to the existing hire_date
 
-### Create Tables with Constraints
+1. List all regions.
+2. Find the name of the region with `region_id` 1.
+3. List all countries in region 2.
+4. Find all locations in the city "New York".
+5. List all job titles.
+6. Retrieve the first and last names of all employees.
+7. Find all employees who were hired in the year 1995.
+8. List all employees who have a salary greater than 5000.
+9. Retrieve the department names along with their location IDs.
+10. List all dependents for the employee with `employee_id` 5.
+11. List all employees with their respective department names.
+12. Find all employees and their job titles.
+13. Retrieve a list of employees along with their manager's name.
+14. List all locations along with their corresponding country names.
+15. Find all employees who work in the "Sales" department.
+16. List all dependents and the first and last names of their respective employees.
+17. Retrieve all employees along with their job titles and department names.
+18. Find all countries and their regions.
+19. List all departments and their location addresses.
+20. Find all employees who work in the same city as "John Doe".
+21. Find the total number of employees.
+22. Calculate the average salary of all employees.
+23. Find the highest salary in the company.
+24. Count the number of employees in each department.
+25. Calculate the total salary expenditure for each department.
+26. Find the department with the highest average salary.
+27. List the number of employees hired in each year.
+28. Calculate the total number of dependents for each employee.
+29. Find the total sales for each region.
+30. Determine the number of employees with salaries above the average salary.
+31. List all employees who earn more than the average salary.
+32. Find all employees who have no dependents.
+33. Retrieve the names of employees who work in departments located in "California".
+34. Find all managers who have more than three direct reports.
+35. List employees who share the same job title as "Jane Smith".
+36. Retrieve the locations that do not have any departments.
+37. Find the department with the maximum number of employees.
+38. List employees who work under the same manager as "Emily Johnson".
+39. Find all jobs that have no employees assigned to them.
+40. Retrieve the names of countries that have more than three locations.
+41. List the top three highest-paid employees.
+42. Find the second-highest salary in the company.
+43. Retrieve the list of employees along with the count of their dependents.
+44. Calculate the total number of employees and the average salary for each job title.
+45. Find the difference between the highest and lowest salary in each department.
+46. List the employees who were hired in the last six months.
+47. Retrieve the names of employees whose salaries are above the average in their department.
+48. Find the departments with fewer than five employees.
+49. List the locations and the number of employees working in each location.
+50. Retrieve the employees who have been with the company for more than 10 years.
+51. List the full names of all employees in uppercase letters.
+52. Retrieve the length of each employee's last name.
+53. Find the substring of the first 3 characters of each employee's first name.
+54. Replace all occurrences of 'a' in employee first names with 'A'.
+55. Concatenate the first name and last name of each employee with a space in between.
+56. Round the salaries of all employees to the nearest whole number.
+57. Calculate the square root of the salary for each employee.
+58. Find the absolute difference between the maximum and minimum salary in the company.
+59. Add 1000 to the salary of each employee and display the result.
+60. Calculate the salary after deducting 10% tax for each employee.
+61. Format the hire date of all employees as 'DD-MM-YYYY'.
+62. Extract the year from the hire date of each employee.
+63. Calculate the number of days each employee has been with the company.
+64. Find the day of the week each employee was hired.
+65. Retrieve the names of employees hired in January.
+66. Find employees who have the same last name as their manager.
+67. List employees who earn more than their managers.
+68. Find the name of the department with the highest number of employees.
+69. List the departments that have fewer than 10 employees.
+70. Calculate the total salary for each department.
+71. Find the average salary for each job title.
+72. Retrieve the total number of employees hired in each year.
+73. Calculate the highest, lowest, and average salary in each department.
+74. Find the department with the highest average salary.
+75. List employees who earn more than the average salary in their department.
 
-#### Authors
-- `author_id` (Primary Key, Auto Increment)
-- `name` (Not Null)
-- `email` (Unique, Not Null)
-
-#### Books
-- `book_id` (Primary Key, Auto Increment)
-- `title` (Not Null)
-- `genre`
-- `publish_date`
-- `author_id` (Foreign Key referencing `Authors.author_id`)
-
-#### Publishers
-- `publisher_id` (Primary Key, Auto Increment)
-- `name` (Not Null)
-- `address`
-
-#### BookPublisher
-- `book_id` (Foreign Key referencing `Books.book_id`)
-- `publisher_id` (Foreign Key referencing `Publishers.publisher_id`)
-- Primary Key (`book_id`, `publisher_id`)
-
-#### Customers
-- `customer_id` (Primary Key, Auto Increment)
-- `name` (Not Null)
-- `email` (Unique, Not Null)
-- `date_of_birth`
-- `membership_level` (Enum: 'Silver', 'Gold', 'Platinum')
-
-#### Orders
-- `order_id` (Primary Key, Auto Increment)
-- `order_date` (Not Null)
-- `customer_id` (Foreign Key referencing `Customers.customer_id`)
-- `book_id` (Foreign Key referencing `Books.book_id`)
-
-#### Addresses
-- `address_id` (Primary Key, Auto Increment)
-- `customer_id` (Foreign Key referencing `Customers.customer_id`, Unique)
-- `street`
-- `city`
-- `postal_code`
-
-#### Categories
-- `category_id` (Primary Key, Auto Increment)
-- `category_name` (Not Null)
-
-#### BookCategories
-- `book_id` (Foreign Key referencing `Books.book_id`)
-- `category_id` (Foreign Key referencing `Categories.category_id`)
-- Primary Key (`book_id`, `category_id`)
-
-#### Reviews
-- `review_id` (Primary Key, Auto Increment)
-- `book_id` (Foreign Key referencing `Books.book_id`)
-- `review_text`
-- `rating` (Check constraint to ensure rating is between 1 and 5)
-
-### Insert Records
-
-- Insert 3 records into the `Authors` table.
-- Insert 4 records into the `Books` table.
-- Insert 2 records into the `Publishers` table.
-- Insert 4 records into the `BookPublisher` table to establish relationships.
-- Insert 3 records into the `Customers` table.
-- Insert 3 records into the `Orders` table.
-- Insert 3 records into the `Addresses` table, ensuring each customer has one address.
-- Insert 3 records into the `Categories` table.
-- Insert 4 records into the `BookCategories` table to establish relationships.
-- Insert 3 records into the `Reviews` table.
-
-### Alter Table
-
-- Add a new column `isbn` (Unique) to the `Books` table.
-- Add a column `phone_number` (Unique) to the `Customers` table.
-- Add a foreign key constraint `publisher_id` to the `Books` table, referencing `Publishers.publisher_id`.
-- Add a check constraint to the `Customers` table to ensure `date_of_birth` is in the past.
-- Add a column `discount` to the `Orders` table with a default value of 0.
-- Modify the `membership_level` column in the `Customers` table to include an additional level 'Diamond'.
-- Add a foreign key constraint `book_id` to the `Reviews` table, referencing `Books.book_id`.
-- Add a unique constraint on the combination of `name` and `author_id` in the `Books` table to prevent duplicate books by the same author.
-- Change the `rating` column in the `Reviews` table to ensure it can only have integer values.
-- Add a foreign key constraint `category_id` to the `Books` table, referencing `Categories.category_id`.
-
-### Update Records
-
-- Update the email address of the author with `author_id` 1.
-- Update the membership level of the customer with `customer_id` 2.
-- Update the address of the customer with `customer_id` 3.
-- Update the genre of the book with `book_id` 2.
-- Update the rating of a review with `review_id` 1 to 4.
-- Update the discount of the order with `order_id` 1 to 10%.
-- Update the publisher of the book with `book_id` 3 to `publisher_id` 2.
-- Update the phone number of the customer with `customer_id` 1.
-- Update the title of the book with `book_id` 4.
-- Update the category of the book with `book_id` 1 to `category_id` 3.
