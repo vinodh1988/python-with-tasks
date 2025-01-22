@@ -31,7 +31,7 @@ ie., add 20 years to the existing hire_date
 26. Find the department with the highest average salary.
 27. List the number of employees hired in each year.
 28. Calculate the total number of dependents for each employee.
-29. Find the total sales for each region.
+29. Find the total employees in  each region.
 30. Determine the number of employees with salaries above the average salary.
 31. List all employees who earn more than the average salary.
 32. Find all employees who have no dependents.
